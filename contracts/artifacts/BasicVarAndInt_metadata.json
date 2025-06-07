@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getAll",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/LearnSolidity.sol": "BasicVarAndInt"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LearnSolidity.sol": {
+			"keccak256": "0x440bbefbbba0e01f3f713124f6dc2d341a73804ae3d5ae8df44cc30e24b01ded",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a82c57a080b954a425ec526a79be32092f31cebc48396a3369882d816a79eb76",
+				"dweb:/ipfs/QmTPQdyoaNZ732CeB19WuEjapNe9qv6sipbWmptWyr8uB6"
+			]
+		}
+	},
+	"version": 1
+}
