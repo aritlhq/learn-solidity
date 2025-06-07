@@ -6,8 +6,29 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getAll",
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "b",
+						"type": "int256"
+					},
+					{
+						"internalType": "bool",
+						"name": "c",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "d",
+						"type": "address"
+					}
+				],
+				"name": "add",
 				"outputs": [
 					{
 						"internalType": "int256",
@@ -15,22 +36,17 @@
 						"type": "int256"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					},
 					{
-						"internalType": "int256",
+						"internalType": "address",
 						"name": "",
-						"type": "int256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -47,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Solidity101.sol": "SignedAndUnsignedInt"
+			"contracts/Solidity101.sol": "FunctionInput"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

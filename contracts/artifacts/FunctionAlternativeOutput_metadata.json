@@ -7,30 +7,20 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getAll",
+				"name": "sum",
 				"outputs": [
 					{
 						"internalType": "int256",
-						"name": "",
+						"name": "k",
 						"type": "int256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					},
 					{
 						"internalType": "int256",
-						"name": "",
+						"name": "j",
 						"type": "int256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -47,7 +37,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Solidity101.sol": "SignedAndUnsignedInt"
+			"contracts/Solidity101.sol": "FunctionAlternativeOutput"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

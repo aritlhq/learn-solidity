@@ -77,7 +77,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/LearnSolidity.sol": "BooleanLogic"
+			"contracts/Solidity101.sol": "BooleanLogic"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -91,12 +91,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/LearnSolidity.sol": {
-			"keccak256": "0x440bbefbbba0e01f3f713124f6dc2d341a73804ae3d5ae8df44cc30e24b01ded",
+		"contracts/Solidity101.sol": {
+			"keccak256": "0xf42a9f9a34d51594a22b1501f152bc038dd31c1270152584347c99eb487bf452",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a82c57a080b954a425ec526a79be32092f31cebc48396a3369882d816a79eb76",
-				"dweb:/ipfs/QmTPQdyoaNZ732CeB19WuEjapNe9qv6sipbWmptWyr8uB6"
+				"bzz-raw://9e7ce0df0ceafd9d40004a2e7dedaa7a7bc79fb2f2816e59bb1fd7afa0d06e69",
+				"dweb:/ipfs/QmW1iKoyBaULoZWUKDVvLSVwmvhPtYRcXUQYawPWUG7YSK"
 			]
 		}
 	},
