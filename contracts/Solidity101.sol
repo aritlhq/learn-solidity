@@ -301,3 +301,158 @@ contract MappingDefinition {
         return owned_book[addr];
     }
 }
+
+contract MappingAddAndUpdate {
+    mapping(uint256 => bool) public myMapping;
+
+    function set() public {
+        myMapping[50] = true;
+    }
+
+    // If you call 50, the result is true.
+}
+
+contract MappingQuery {
+    mapping(address => uint256) private owned_book;
+
+    function add_book(address owner, uint256 bookId) public {
+        owned_book[owner] = bookId;
+    }
+
+    function get_book(address owner) public view returns (uint256) {
+        return owned_book[owner];
+    }
+}
+
+contract MappingQuery2 {
+    mapping(int256 => bool) public flags;
+
+    constructor() {
+        flags[42] = true;
+    }
+
+    function myFunction() public view returns (bool) {
+        bool checkFlags = flags[42];
+        return checkFlags;
+    }
+}
+
+contract MappingDelete {
+    mapping(address => uint256) public balance;
+
+    function add() public {
+        balance[address(0x123)] = 10;
+    }
+
+    function deleteF() public {
+        delete balance[address(0x123)];
+    }
+
+    function update() public {
+        balance[address(0x123)] += 60;
+    }
+}
+
+contract StateVariable {
+    int256 bookID; // State variable
+    bool read; // State variable
+
+    function a() public returns (int256) {
+        bookID = 3;
+
+        int256 bookId = bookID;
+        return bookId;
+    }
+
+    function b() public returns (int256) {
+        return a();
+    }
+}
+
+contract LocalVariable {
+    uint256 c;
+
+    function getResult() public returns (uint256) {
+        uint256 a = 1; // Local variable
+        uint256 b = 2; // Loval variable
+        uint256 result = a + b; // Loval variable
+        c = result; // This is not a local variable
+
+        return result; // Access the local variable
+    }
+}
+
+contract StateMutabilityPure {
+    mapping(int256 => int256) aa;
+
+    // This is pure function (state mutability)
+    function add(int256 a, int256 b) public pure returns (int256) {
+        return a + b;
+    }
+
+    // This is not
+    function addNotPure(int256 a, int256 b) public returns (int256) {
+        aa[50] = a + b;
+        return aa[50];
+    }
+}
+
+contract StateMutabliityTest {
+    mapping(address => uint256) testajalah;
+
+    function notPure(uint256 a, uint256 b) public returns (uint256) {
+        testajalah[address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4)] = a * b;
+        return testajalah[address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4)];
+    }
+}
+
+contract StateMutabilityView {
+    int256 c = 10;
+
+    function add(int256 a, int256 b) public pure returns (int256) {
+        return a + b;
+    }
+
+    // This is a view function, but it's not a pure function
+    function addView(int256 a) public view returns (int256) {
+        // c is outside the function, and this is using information outside this function
+        // so not pure, but we're not modifying the information, so it's view
+        return a + c;
+    }
+
+    // This is neither pure nor view
+    function addNotPure(int256 a, int256 b) public returns (int256) {
+        // c is outside the function and we're modyfing the information
+        c = a + b;
+        return c;
+    }
+}
+
+contract Constructor {
+    uint256 public a;
+
+    constructor(uint256 _a) {
+        a = _a;
+    }
+}
+
+contract Constructor2 {
+    constructor() {}
+}
+
+contract ErrorHandlingRequire {
+    address a = address(0x123);
+
+    function buy(uint256 amount) public payable {
+        require(a == msg.sender, "Not authorized");
+        require(msg.value >= amount, "Insufficient funds");
+    }
+}
+
+contract SpecialVariableMsg{
+    address a = address(0x123);
+
+    function buy(uint amount) public payable {
+        require(a == msg.sender, "Not authorized");
+    }
+}

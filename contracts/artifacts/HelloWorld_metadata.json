@@ -47,11 +47,11 @@
 	},
 	"sources": {
 		"contracts/Solidity101.sol": {
-			"keccak256": "0xf42a9f9a34d51594a22b1501f152bc038dd31c1270152584347c99eb487bf452",
+			"keccak256": "0xa05a1b16144b8b7c345b1dda3ea5af6c019138bff4c5fd8ed65ba5ec97e436bb",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://9e7ce0df0ceafd9d40004a2e7dedaa7a7bc79fb2f2816e59bb1fd7afa0d06e69",
-				"dweb:/ipfs/QmW1iKoyBaULoZWUKDVvLSVwmvhPtYRcXUQYawPWUG7YSK"
+				"bzz-raw://bed9f6beb60f558ee605ecece5440168b952dd401368f2706faf51ac79350963",
+				"dweb:/ipfs/QmRpHAs5ZruMfPNwRhDEwYGpKFH9YVpNGGRdAdhCNFbSUw"
 			]
 		}
 	},
