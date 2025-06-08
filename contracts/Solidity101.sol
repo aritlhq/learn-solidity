@@ -250,3 +250,54 @@ contract FunctionCall {
         result = subtract(j, i);
     }
 }
+
+contract ScopePublicAndPrivate {
+    uint256 public a;
+
+    function aa() public {
+        a++;
+    }
+
+    uint256 private b;
+
+    function bb() private {
+        b++;
+    }
+}
+
+contract ScopeInternal {
+    uint256 public result;
+
+    function aa(uint256 a) internal {
+        result = a + 1;
+    }
+
+    function b(uint256 b_) public {
+        aa(b_);
+    }
+}
+
+contract ScopeExternal {
+    uint256 public result;
+
+    function aa(uint256 a) external {
+        result = a + 1;
+    }
+
+    function b(uint256 b_) public {
+        this.aa(b_);
+    }
+}
+
+contract MappingDefinition {
+    // Create a mapping that has a key of type address and a value of type uint named owned_book;
+    mapping(address => uint256) private owned_book;
+
+    function add_book(uint256 bookId) public {
+        owned_book[address(0x123)] = bookId;
+    }
+
+    function getBook(address addr) public view returns (uint256) {
+        return owned_book[addr];
+    }
+}
