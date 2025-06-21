@@ -2,7 +2,7 @@
 
 pragma solidity >=0.8.2 <0.9.0;
 
-contract HelloWorld {
+contract ValueAndReferenceTypeExample {
     string sayHello = "Hello World!";
 
     function sayNow() public view returns (string memory) {
